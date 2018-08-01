@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Smart School Bus Pro</string>
+    <string name="title_activity_student_login">Student Login</string>
+    <string name="title_activity_parent_login">Parent Login</string>
+    <string name="title_activity_driver_login">Driver Login</string>
+    <string name="title_activity_student_home">Dashboard</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_studentID">Student ID</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This ID is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">The username and/or password are not correct</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+</resources>

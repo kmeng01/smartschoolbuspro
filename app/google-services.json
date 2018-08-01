@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "476255920663",
+    "firebase_url": "https://smart-school-bus-pro.firebaseio.com",
+    "project_id": "smart-school-bus-pro",
+    "storage_bucket": "smart-school-bus-pro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476255920663:android:8c01214c2ed73a8b",
+        "android_client_info": {
+          "package_name": "com.example.kevin.smartschoolbuspro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476255920663-oqerrujmi41ir3rfmvcch83i5m9mqts8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQ73MMDc8TmuhT1TjUN2be8m_PzrPavTs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

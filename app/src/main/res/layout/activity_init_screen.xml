@@ -95,14 +95,4 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_clearDB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DESTROY DB"
-        android:textSize="10sp"
-        android:background="#FFFFFF"
-        tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="572dp" />
-
 </android.support.constraint.ConstraintLayout>

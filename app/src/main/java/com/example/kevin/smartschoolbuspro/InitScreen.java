@@ -45,15 +45,6 @@ public class InitScreen extends AppCompatActivity {
             }
         });
 
-        final Button btn_clearDB = findViewById(R.id.btn_clearDB);
-        btn_clearDB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                UserDatabaseInitializer.executeClear(UserAppDatabase.getAppDatabase(getApplicationContext()));
-                System.out.println("done");
-            }
-        });
-
     }
 
 }

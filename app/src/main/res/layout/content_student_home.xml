@@ -4,8 +4,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/studenthome_background"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".StudentHome"
     tools:showIn="@layout/app_bar_student_home">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Welcome, User!"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="15dp"/>
+        <TextView
+            android:id="@+id/txt_datetime"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:text="Date and Time"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/txt_route"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:text="Route Number"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:layout_marginBottom="25dp"/>
+
+        <Button
+            android:id="@+id/btn_spacer"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#000000"></Button>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <ImageButton
+                android:id="@+id/btn_board"
+                android:layout_width="10dp"
+                android:layout_height="125dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="33"
+                android:adjustViewBounds="true"
+                android:background="#00FFFFFF"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/board_bus" />
+
+            <ImageButton
+                android:id="@+id/btn_disembark"
+                android:layout_width="10dp"
+                android:layout_height="125dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="33"
+                android:adjustViewBounds="true"
+                android:background="#00FFFFFF"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/disembark_bus" />
+
+            <ImageButton
+                android:id="@+id/btn_map"
+                android:layout_width="10dp"
+                android:layout_height="125dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="33"
+                android:adjustViewBounds="true"
+                android:background="#00FFFFFF"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/bus_map" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -4,95 +4,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/initscreen_background"
     tools:context=".InitScreen">
 
-    <ImageView
-        android:id="@+id/img_initscreenbackground"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/initscreen_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/tv_welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Welcome to Smart School Bus Pro"
-        android:padding="22dp"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_description"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:includeFontPadding="false"
-        android:text="Please select your user type:"
-        android:textSize="15sp"
-        android:textColor="#000000"
-        android:layout_marginBottom="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/initscreen_background"
+        android:gravity="bottom">
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="Please select your user type:"
+            android:textSize="15sp"
+            android:layout_marginBottom="15dp"
+            android:textColor="#000000"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_student"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_weight="33"
+                android:scaleType="fitCenter"
+                android:text="Student"
+                android:background="#00FFFFFF"
+                android:src="@drawable/student" />
+
+            <ImageButton
+                android:id="@+id/btn_driver"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_weight="33"
+                android:scaleType="fitCenter"
+                android:text="Student"
+                android:background="#00FFFFFF"
+                android:src="@drawable/driver" />
+
+            <ImageButton
+                android:id="@+id/btn_parent"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_weight="33"
+                android:scaleType="fitCenter"
+                android:text="Student"
+                android:background="#00FFFFFF"
+                android:src="@drawable/parent" />
+        </LinearLayout>
+
+    </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginBottom="30dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginStart="22dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_welcome">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="top">
 
-        <ImageButton
-            android:id="@+id/btn_student"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_weight="33"
-            android:scaleType="fitCenter"
-            android:text="Student"
-            android:background="#00FFFFFF"
-            android:src="@drawable/student" />
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Welcome to"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
 
-        <ImageButton
-            android:id="@+id/btn_driver"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_weight="33"
-            android:scaleType="fitCenter"
-            android:text="Student"
-            android:background="#00FFFFFF"
-            android:src="@drawable/driver" />
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/smartschoolbuspro" />
 
-        <ImageButton
-            android:id="@+id/btn_parent"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_weight="33"
-            android:scaleType="fitCenter"
-            android:text="Student"
-            android:background="#00FFFFFF"
-            android:src="@drawable/parent" />
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

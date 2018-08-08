@@ -14,6 +14,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
+import java.time.LocalDateTime;
+import java.util.Calendar;
+import java.util.TimeZone;
 
 public class StudentHome extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -46,6 +53,7 @@ public class StudentHome extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         retrieveFromDB();
+        process_header();
     }
 
     private void retrieveFromDB() {
@@ -54,6 +62,49 @@ public class StudentHome extends AppCompatActivity
             int temp = 1/0;
         }
         user = UserDatabaseInitializer.executeAll(UserAppDatabase.getAppDatabase(this)).get(0);
+    }
+
+    private void process_header() {
+        TextView txt_welcome = (TextView) findViewById(R.id.txt_welcome);
+        txt_welcome.setText("Welcome, " + user.first_name + "!");
+
+        TextView txt_datetime = (TextView) findViewById(R.id.txt_datetime);
+        Calendar cal = Calendar.getInstance();
+        cal.setTimeZone(TimeZone.getDefault());
+        int day = cal.get(Calendar.DAY_OF_WEEK);
+        String str_day = "", str_date = "", str_route = "";
+        switch (day) {
+            case Calendar.SUNDAY:
+                str_day = "Sunday";
+                break;
+            case Calendar.MONDAY:
+                str_day = "Monday";
+                break;
+            case Calendar.TUESDAY:
+                str_day = "Tuesday";
+                break;
+            case Calendar.WEDNESDAY:
+                str_day = "Wednesday";
+                break;
+            case Calendar.THURSDAY:
+                str_day = "Thursday";
+                break;
+            case Calendar.FRIDAY:
+                str_day = "Friday";
+                break;
+            case Calendar.SATURDAY:
+                str_day = "Saturday";
+                break;
+        }
+        String[] monthName = { "January", "February", "March", "April", "May", "June", "July",
+                "August", "September", "October", "November", "December" };
+        String month = monthName[cal.get(Calendar.MONTH)];
+        str_date = str_day + ", " + month + " " + cal.get(Calendar.DATE) + ", " + cal.get(Calendar.YEAR);
+        txt_datetime.setText(str_date);
+
+        TextView txt_route = (TextView) findViewById(R.id.txt_route);
+        txt_route.setText("Bus Route: " + Integer.toString(user.route));
+
     }
 
     @Override

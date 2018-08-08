@@ -20,7 +20,9 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_student_home" />
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_student_home" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -29,5 +31,17 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
+
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="220dp"-->
+        <!--android:paddingTop="55dp">-->
+        <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:id="@+id/top_background"-->
+            <!--android:layout_height="220dp"-->
+            <!--android:layout_gravity="top"-->
+            <!--app:srcCompat="@drawable/homescreen_background" />-->
+    <!--</LinearLayout>-->
 
 </android.support.design.widget.CoordinatorLayout>
